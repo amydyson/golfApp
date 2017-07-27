@@ -1,0 +1,32 @@
+<%= form_with(model: golfer, local: true) do |form| %>
+  <% if golfer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(golfer.errors.count, "error") %> prohibited this golfer from being saved:</h2>
+
+      <ul>
+      <% golfer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :golfer_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :handicap %>
+    <%= form.text_field :handicap, id: :golfer_handicap %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ghin %>
+    <%= form.number_field :ghin, id: :golfer_ghin %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

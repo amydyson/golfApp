@@ -1,0 +1,120 @@
+<%= form_with(model: score, local: true) do |form| %>
+  <% if score.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(score.errors.count, "error") %> prohibited this score from being saved:</h2>
+
+      <ul>
+      <% score.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :h1 %>
+    <%= form.number_field :h1, id: :score_h1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :h2 %>
+    <%= form.number_field :h2, id: :score_h2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :h3 %>
+    <%= form.number_field :h3, id: :score_h3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :h4 %>
+    <%= form.number_field :h4, id: :score_h4 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :h5 %>
+    <%= form.number_field :h5, id: :score_h5 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :h6 %>
+    <%= form.number_field :h6, id: :score_h6 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :h7 %>
+    <%= form.number_field :h7, id: :score_h7 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :h8 %>
+    <%= form.number_field :h8, id: :score_h8 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :h9 %>
+    <%= form.number_field :h9, id: :score_h9 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :h10 %>
+    <%= form.number_field :h10, id: :score_h10 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :h11 %>
+    <%= form.number_field :h11, id: :score_h11 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :h12 %>
+    <%= form.number_field :h12, id: :score_h12 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :h13 %>
+    <%= form.number_field :h13, id: :score_h13 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :h14 %>
+    <%= form.number_field :h14, id: :score_h14 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :h15 %>
+    <%= form.number_field :h15, id: :score_h15 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :h16 %>
+    <%= form.number_field :h16, id: :score_h16 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :h17 %>
+    <%= form.number_field :h17, id: :score_h17 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :h18 %>
+    <%= form.number_field :h18, id: :score_h18 %>
+  </div>
+
+
+  <div class="field">
+  <%= form.label :golfer_id %>
+  <%= form.collection_select :golfer_id, Golfer.all, :id, :name%>
+</div>
+
+<div class="field">
+<%= form.label :tournament_id %>
+<%= form.collection_select :tournament_id, Tournament.all, :id, :course%>
+</div>
+
+
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

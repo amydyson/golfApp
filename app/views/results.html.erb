@@ -1,0 +1,34 @@
+<h1>Results</h1>
+
+
+
+
+ <% @sorted_array.each do |element| %>
+
+	 <%  element.each do |key, value| %>
+
+	 <%=  "#{key}:  #{value}  |    " %>
+	 <% end %><br><br>
+   <%    end %>
+
+
+<br>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+<%= link_to 'New Score', new_score_path %>

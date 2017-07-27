@@ -1,0 +1,35 @@
+<h1>Results</h1>
+
+
+
+<% @scores.each do |score| %>
+<%= score.golfer.name %>: 
+<%= score.h1 %>, <%= score.h2 %>, <%= score.h3 %>, <%= score.h4 %>, <%= score.h5 %>, <%= score.h6 %>, <%= score.h7 %>, <%= score.h8 %>, <%= score.h9 %>, <strong>Front Nine:</strong><%=front_nine= score.h1+score.h2+score.h3+score.h4+score.h5+score.h6+score.h7+score.h8+score.h9%>
+
+<%= score.h10 %>, <%= score.h12 %>, <%= score.h13 %>, <%= score.h14 %>, <%= score.h15 %>, <%= score.h16 %>, <%= score.h17 %>, <%= score.h18 %> <strong>Back Nine:</strong><%=back_nine = score.h10+score.h11+score.h12+score.h13+score.h14+score.h15+score.h16+score.h17+score.h18%>
+
+<strong>Total:</strong><%=total = front_nine + back_nine%>
+
+
+
+<br>
+
+<% end %>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+<%= link_to 'New Score', new_score_path %>

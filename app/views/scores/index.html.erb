@@ -1,0 +1,79 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Scores</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>H1</th>
+      <th>H2</th>
+      <th>H3</th>
+      <th>H4</th>
+      <th>H5</th>
+      <th>H6</th>
+      <th>H7</th>
+      <th>H8</th>
+      <th>H9</th>
+      <th>H10</th>
+      <th>H11</th>
+      <th>H12</th>
+      <th>H13</th>
+      <th>H14</th>
+      <th>H15</th>
+      <th>H16</th>
+      <th>H17</th>
+      <th>H18</th>
+      <th>Golfer</th>
+      <th>Date</th>
+      <th>Course</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @scores.each do |score| %>
+      <tr>
+        <td><%= score.h1 %></td>
+        <td><%= score.h2 %></td>
+        <td><%= score.h3 %></td>
+        <td><%= score.h4 %></td>
+        <td><%= score.h5 %></td>
+        <td><%= score.h6 %></td>
+        <td><%= score.h7 %></td>
+        <td><%= score.h8 %></td>
+        <td><%= score.h9 %></td>
+        <td><%= score.h10 %></td>
+        <td><%= score.h11 %></td>
+        <td><%= score.h12 %></td>
+        <td><%= score.h13 %></td>
+        <td><%= score.h14 %></td>
+        <td><%= score.h15 %></td>
+        <td><%= score.h16 %></td>
+        <td><%= score.h17 %></td>
+        <td><%= score.h18 %></td>
+        <td><%= score.golfer.name %></td>
+        <td><%= score.tournament.date %></td>
+        <td><%= score.tournament.course %></td>
+        <!-- <td><%= link_to 'Show', score %></td> -->
+        <td><%= link_to 'Edit', edit_score_path(score) %></td>
+        <td><%= link_to 'Delete', score, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+
+
+
+<form action="scores/calculate" method="post">
+<label for "tournament_date">Tournament Date</label>
+  <input type="" name="" placeholder="MM/DD/YYYY"><br>
+  <input type="submit" name="submit_button" value="Caculate Low Gross & Low Net">
+</form>
+
+<br><br><br>
+
+<%= link_to 'New Score', new_score_path %>
