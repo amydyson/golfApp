@@ -18,8 +18,12 @@ class ScoresController < ApplicationController
   end
 
 def calculate
-  @scores = Score.all
-  @x = @scores[0].golfer.name
+
+    raise params.inspect
+    
+  @scores_all = Score.all
+
+  @scores = Score.where(:tournament_id => 3)
   @length = @scores.length
   @new_array = Array.new
 
@@ -28,11 +32,12 @@ def calculate
 
  while i < @length do
 
+
       @front9 = @scores[i].h1 + @scores[i].h2 + @scores[i].h3 + @scores[i].h4 + @scores[i].h5 + @scores[i].h6 + @scores[i].h7 + @scores[i].h8 + @scores[i].h9
 
-     @back9 = @scores[i].h10 + @scores[i].h11 + @scores[i].h12 + @scores[i].h13 + @scores[i].h14 + @scores[i].h15 + @scores[i].h16 + @scores[i].h17 + @scores[i].h18 
+      @back9 = @scores[i].h10 + @scores[i].h11 + @scores[i].h12 + @scores[i].h13 + @scores[i].h14 + @scores[i].h15 + @scores[i].h16 + @scores[i].h17 + @scores[i].h18 
 
-     @total = @front9 + @back9
+      @total = @front9 + @back9
 
 
       @new_hash = {:golfer => @scores[i].golfer.name, :hole1 =>  @scores[i].h1, :hole2 =>  @scores[i].h2, :hole3 =>  @scores[i].h3, :hole4 =>  @scores[i].h4, :hole5 =>  @scores[i].h5, :hole6 =>  @scores[i].h6, :hole7 =>  @scores[i].h7, :hole8 =>  @scores[i].h8, :hole9 =>  @scores[i].h9,
@@ -53,7 +58,7 @@ def calculate
 
  @sorted_array = @new_array.sort_by { |k| k[:total] }
 
- 
+
  
    render "/results"
 end

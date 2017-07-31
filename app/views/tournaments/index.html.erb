@@ -26,4 +26,17 @@
 
 <br>
 
+  <tbody>
+     <% @members = Golfer.all %>
+    <% @members.each do |member| %>
+      <tr>
+      
+          <input type="checkbox" name="golfer" value=<%= member.id %>> <%= member.name %>
+
+      </tr><br>
+    <% end %>
+  </tbody>
+</table>
+<input type="submit" name="Submit">
+
 <%= link_to 'New Tournament', new_tournament_path %>

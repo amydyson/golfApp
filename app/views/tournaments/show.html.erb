@@ -10,5 +10,140 @@
   <%= @tournament.course %>
 </p>
 
-<%= link_to 'Edit', edit_tournament_path(@tournament) %> |
+
+<%= link_to 'Edit Tournament Course or Date', edit_tournament_path(@tournament) %> |
+
+<br><br><br><br><br>
+
+<form action="/scores" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="Uzm7Fp1eJPaxzOdXhj1mOklPJD8QtT/fy6A9uPdck3SSEvbW9NZjx4Gybg2/t9ciRWj8Z5hxgtLr5LygQGOaRQ==">
+
+  <div class="field">
+  <label for="score_golfer_id">Golfer</label>
+  <select name="score[golfer_id]"><option value="8">Allen Greg</option>
+<option value="9">Anderson Gary</option>
+<option value="10">Baran Bob</option>
+<option value="11">Bertrand John</option>
+<option value="12">Bonatus Ken</option>
+<option value="13">Bradley George</option>
+<option value="14">Broughton Bob</option>
+<option value="15">Brown Dusty</option>
+<option value="16">Burnside Don</option>
+<option value="17">Butler Dave</option>
+<option value="18">Campbell Tony</option>
+<option value="19">Campitiello Larry</option>
+<option value="20">Cardenas Robert</option>
+<option value="21">Carney John</option>
+<option value="22">Christensen Ade</option>
+<option value="23">Clifton Roger</option>
+<option value="24">Coker Jim</option></select>
+</div>
+
+
+  <div class="field">
+    <label for="score_h1">H1</label>
+    <input id="score_h1" type="number" name="score[h1]">
+  </div>
+
+  <div class="field">
+
+    <label for="score_h2">H2</label>
+    <input id="score_h2" type="number" name="score[h2]">
+  </div>
+
+  <div class="field">
+    <label for="score_h3">H3</label>
+    <input id="score_h3" type="number" name="score[h3]">
+  </div>
+
+  <div class="field">
+    <label for="score_h4">H4</label>
+    <input id="score_h4" type="number" name="score[h4]">
+  </div>
+
+  <div class="field">
+    <label for="score_h5">H5</label>
+    <input id="score_h5" type="number" name="score[h5]">
+  </div>
+
+  <div class="field">
+    <label for="score_h6">H6</label>
+    <input id="score_h6" type="number" name="score[h6]">
+  </div>
+
+  <div class="field">
+    <label for="score_h7">H7</label>
+    <input id="score_h7" type="number" name="score[h7]">
+  </div>
+
+  <div class="field">
+    <label for="score_h8">H8</label>
+    <input id="score_h8" type="number" name="score[h8]">
+  </div>
+
+  <div class="field">
+    <label for="score_h9">H9</label>
+    <input id="score_h9" type="number" name="score[h9]">
+  </div>
+
+  <div class="field">
+    <label for="score_h10">H10</label>
+    <input id="score_h10" type="number" name="score[h10]">
+  </div>
+
+  <div class="field">
+    <label for="score_h11">H11</label>
+    <input id="score_h11" type="number" name="score[h11]">
+  </div>
+
+  <div class="field">
+    <label for="score_h12">H12</label>
+    <input id="score_h12" type="number" name="score[h12]">
+  </div>
+
+  <div class="field">
+    <label for="score_h13">H13</label>
+    <input id="score_h13" type="number" name="score[h13]">
+  </div>
+
+  <div class="field">
+    <label for="score_h14">H14</label>
+    <input id="score_h14" type="number" name="score[h14]">
+  </div>
+
+  <div class="field">
+    <label for="score_h15">H15</label>
+    <input id="score_h15" type="number" name="score[h15]">
+  </div>
+
+  <div class="field">
+    <label for="score_h16">H16</label>
+    <input id="score_h16" type="number" name="score[h16]">
+  </div>
+
+  <div class="field">
+    <label for="score_h17">H17</label>
+    <input id="score_h17" type="number" name="score[h17]">
+  </div>
+
+  <div class="field">
+    <label for="score_h18">H18</label>
+    <input id="score_h18" type="number" name="score[h18]">
+  </div>
+
+
+
+
+
+
+
+  <div class="actions">
+    <input type="submit" name="commit" value="Create Score" data-disable-with="Create Score">
+  </div>
+</form>
+
+
+
+
+
+<br><br><br><br><br>
 <%= link_to 'Back', tournaments_path %>
